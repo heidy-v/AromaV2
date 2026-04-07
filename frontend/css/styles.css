@@ -1,0 +1,14 @@
+/* nav */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  height: 100px;   /* controla el tamaño */
+  width: auto;    /* mantiene proporción */
+  object-fit: contain;
+}
+h1 {
+    text-align: center;
+}
