@@ -1,4 +1,7 @@
-/* nav */
+body {
+  background-color: #E7E2CF;
+}
+/*------------------------- nav--------------------------- */
 .navbar {
   display: flex;
   align-items: center;
@@ -44,10 +47,62 @@
   /* Un pequeño salto hacia arriba */
   transform: translateY(-5px);
 }
+/*----------------footer-----------------------*/
+footer {
+  text-align: center;
+  padding: 30px;
+}
 /*--------------------secciones-----------------*/
 .view{
   display: none;
 }
 .view.active{
   display: block;
+}
+/*-----------------menu------------------------*/
+.products-container {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+}
+/* ------------menu js------------ */
+.product-card {
+ background-color: #BAA973;
+ text-align: center;
+ padding: 15px;
+ border: 3px;
+ border-radius: 15px;
+}
+.product-price {
+ text-align: right;
+ padding: 15px;
+ color: #5a1f3c;
+}
+/*------------botones-----------*/
+.btn-add {
+  margin-top: 15px;
+  background-color: #c1d4d4;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; /*manito del cursor*/
+ } 
+.btn-detalles {
+  margin-top: 15px;
+  background-color: #c1d4d4;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; /*manito del cursor*/
+}
+.btn-add:hover {
+  background-color: #9df3f3;
+  transform: translateY(-5px);
+}
+.btn-detalles:hover {
+  background-color: #9df3f3;
+  transform: translateY(-5px);
 }
