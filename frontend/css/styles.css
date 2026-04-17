@@ -89,7 +89,7 @@ footer {
   border-radius: 10px;
   cursor: pointer; /*manito del cursor*/
  } 
-.btn-detalles {
+.btn-detalle {
   margin-top: 15px;
   background-color: #c1d4d4;
   padding: 10px;
@@ -102,7 +102,14 @@ footer {
   background-color: #9df3f3;
   transform: translateY(-5px);
 }
-.btn-detalles:hover {
+.btn-detalle:hover {
   background-color: #9df3f3;
   transform: translateY(-5px);
+}
+/*-----------------imagenes------------*/
+.imagen {
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
 }

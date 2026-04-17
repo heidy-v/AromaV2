@@ -22,30 +22,32 @@ enlaces.forEach(function (enlace) {
 });
 
 
-
 const productos = [
   {
     id: 1,
     nombre: "Torta de Selva Negra",
-    Image: "img/selva-negra.jpg",
+    imagen: "img/selva-negra.jpg",
     descripcion: "Bizcocho de chocolate con crema chantilly y cerezas.",
     precio: 12,
   },
   {
     id: 2,
     nombre: "Red Velvet",
+    imagen: "img/red-velvet.jpg",
     descripcion: "Bizcocho de color rojo intenso y crema de queso.",
     precio: 12,
   },
   {
     id: 3,
     nombre: "Torta De Tres Leches",
+    imagen: "img/tres-leches.jpg",
     descripcion: "Bizcocho suave relleno de manjar blanco tradicional.",
     precio: 10,
   },
   {
     id: 4,
     nombre: "Torta De Pistacho",
+    imagen: "img/pistacho.jpg",
     descripcion: "Una combinación elegante de bizcocho verde con frutos rojos.",
     precio: 15,
   },
@@ -75,19 +77,33 @@ const productos = [
   },
 ];
 
+
+const id = 3;
+const resultado = productos.find((p) => p.id === id);
+// console.log(resultado);
+
+let carrito = [];
+
+
+function actualizarContador() {
+  const contador = document.getElementById("cart-count");
+
+  contador.textContent = carrito.length;
+}
+
 /*---------------Contenedor de cada Producto-------------*/
 function renderizarProductos () {
 const contenedor = document.getElementById("products-container");
 contenedor.innerHTML= "";
 productos.forEach(function (producto) {
   contenedor.innerHTML += `<div class="product-card"> 
-<img>${producto.imagen}</img>
 <h3>${producto.nombre}</h3>
+<img class=imagen src="${producto.imagen}">
 <p>${producto.descripcion}</p>
 <span class="product-price">${producto.precio}</span>
 <br>
 <button class="btn-add" data-id="${producto.id}">Agregar al carrito</button>
-<button class="btn-add detalle" data-id="${producto.id}">Detalles</button>
+<button class="btn-detalle" data-id="${producto.id}">Detalles</button>
 </div>`;
   });
   /*---------funcionamiento botones-----------*/
@@ -97,18 +113,30 @@ console.log(botones);
 botones.forEach(function (boton){
   boton.addEventListener("click", function() {
     const id = this.dataset.id;
-    alert("Producto agregado:", + id  );
-  })
+     alert("Producto agregado: "+ id );
+    const nombre = producto.nombre;
+    alert(nombre);
+
+    const producto = productos.find((p)=> p.id === id);
+    carrito.push(producto);
+    console.log("carrito: ", carrito );
+    console.log("se añadio", producto.nombre, "al carrito");
+
+
+    actualizarContador()
+  });
 });
 
+
 // // // /*-----------------btn detalles--------------*/
-//  const botonesdetalles = document.querySelectorAll(".btn-add detalle");
-//  console.log(botones);
-//  botones.forEach(function (boton){
-//    boton.addEventListener("click", function() {
-//      const id = this.dataset.id;
-//      alert("Detalles:", + id  );
-//    })
-//  });
+  const botondetalles = document.querySelectorAll(".btn-detalle");
+   console.log(botones);
+  botondetalles.forEach(function (boton){
+    boton.addEventListener("click", function() {
+     const id = this.dataset.id;
+       alert("Detalles: " + id);
+     })
+   });
 }
-renderizarProductos(); 
+ renderizarProductos(); 
+
