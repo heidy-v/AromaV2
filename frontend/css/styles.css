@@ -113,3 +113,196 @@ footer {
   object-fit: cover;
   border-radius: 8px;
 }
+/* ---------------carrito----------- */
+#view-cart {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+#view-cart h2 {
+    text-align: center;
+    color: #181614;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Contenedor de los productos agregados */
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cada producto dentro del carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border-left: 5px solid #6d4d1c; /* color al borde izquierdo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.cart-item:hover {
+    transform: scale(1.01);
+}
+
+
+.cart-item span {
+    font-weight: bold;
+    color: #cc952e; /* Color del precio */
+    font-size: 1.1rem;
+}
+
+/* Estilo para el mensaje de carrito vacío */
+#cart-container p {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 40px;
+}
+
+
+/* Contenedor principal de la factura */
+#cart-container {
+    background-color: #ffffff;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo máquina de escribir */
+    color: #333;
+}
+
+/* Efecto de borde de papel cortado en la parte inferior */
+#cart-container::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(-45deg, transparent 5px, #ffffff 5px), 
+                linear-gradient(45deg, transparent 5px, #c2c0c0 5px);
+    background-size: 10px 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #694829;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Resumen final */
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #5a0404;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Botón de confirmar estilo sello */
+.btn-checkout {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #88552c;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.btn-checkout:hover {
+    background-color: rgba(219, 165, 114, 0.767);
+    transform: translateY(-2px);
+}
+
+.contact-form {
+  background-color: pink;
+  border: 1px solid pink;
+  border-radius: pink ;
+  padding: 32px;
+  box-shadow: black;
+  max-width: 680px;
+}
+.form-group{
+  margin-bottom: 20px;
+
+}
+.form-group {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: white;
+  background-color: white;
+}
+
+.error-msg {
+  display: block;
+  color: brown;
+  margin-top: 4px;
+}
+
+.success-msg {
+  margin-top: 16px;
+  color: green;
+  font-weight: 600;
+}
