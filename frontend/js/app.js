@@ -97,7 +97,7 @@ function renderizarProductos() {
       <div class="product-card">
         <h3>${producto.nombre}</h3>
         <img class="imagen" src="${producto.imagen}" alt="${producto.nombre}">
-        <p>${producto.descripcion}</p>
+        <p class="product-description">${producto.descripcion}</p>
         <span class="product-price">Bs. ${producto.precio}</span>
         <button class="btn-add" data-id="${producto.id}">Agregar al carrito</button>
         <button class="btn-detalle" data-id="${producto.id}">Detalles</button>
@@ -119,7 +119,7 @@ function renderizarProductos() {
         carrito.push({ ...producto, cantidad: 1 });
       }
 
-      guardarCarrito();
+      
       actualizarContador();
       renderizarCarrito();
     });
@@ -225,6 +225,7 @@ function renderizarCarrito() {
         }
       }
 
+      guardarCarrito();
       actualizarContador();
       renderizarCarrito();
     });

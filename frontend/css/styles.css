@@ -1,51 +1,153 @@
 body {
-  background-color: #E7E2CF;
+  background: linear-gradient(to bottom, #1b0d07, #2d1a12);
+  background-attachment: fixed;
+  color: #e7e2cf;
 }
-/*------------------------- nav--------------------------- */
+h2 {
+  color: #e7e2cf;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+/* --- NAVBAR ESTILO PREMIUM --- */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 1rem 5%;
-  background-color: #d1c6a2; /*  fondo */
-  color: rgba(24, 22, 22, 0.712);
-  font-family: sans-serif;
-  border-radius: 15px;
+  background-color: #2d1a12; /* Marrón casi negro, muy elegante */
+  color: #e7e2cf; /* Texto color crema */
+  font-family: 'Georgia', serif;
+  border-bottom: 2px solid #6d4d1c; /* Una línea sutil café abajo */
+  border-radius: 0 0 15px 15px; /* Solo redondeado abajo */
 }
 .logo {
   height: 100px;   /* controla el tamaño */
   width: auto;    /* mantiene proporción */
-  object-fit: contain;
+  object-fit: contain
 }
+
 .link {
-  display: flex; /* horizontal */
+  display: flex;
   list-style: none;
-  gap: 15px; /* Espacio entre cada cuadro */
+  gap: 20px;
 }
+
 .link a {
   text-decoration: none;
-  color: #070505;
-  padding: 10px 20px;
-  display: inline;
-  border: 2px solid #584012; /* Cuadro azul eléctrico inicial */
-  border-radius: 8px;
-  transition: all 0.4s ease; /* Para que el efecto sea suave */
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  color: #e7e2cf; /* Color crema */
+  padding: 8px 16px;
+  border: 1px solid transparent; /* Para que no salte al hacer hover */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-transform: capitalize; /* Se ve más elegante que todo en mayúsculas */
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
-/* --- EFECTO HOVER --- */
+
+/* --- HOVER CON ESTILO DORADO --- */
 .link a:hover {
-  background-color: #9e783f; /* Cambia al pasar el mouse */
-  border-color: #e7e7db;
-  color: #fff;
-  
-  /* El resplandor (Glow) */
-  box-shadow: 0 0 10px #d3a46e, 0 0 30px #d3b378;
-  
-  /* Un pequeño salto hacia arriba */
-  transform: translateY(-5px);
+  color: #cc952e; /* Color dorado café */
+  border: 1px solid #cc952e;
+  background-color: rgba(204, 149, 46, 0.1); /* Un fondo dorado muy clarito */
+  transform: translateY(-2px);
+}
+
+/* -------------secion inicio -----------*/
+/* Quitamos las estadísticas y centramos más el texto */
+.hero-right {
+    flex: 1;
+    padding-left: 50px; /* Espacio para que no choque con la imagen */
+}
+
+.hero-subtitle span {
+    color: #cc952e; /* Tu dorado característico */
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.hero-text {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #e7e2cf;
+    max-width: 500px;
+}
+/* --- AJUSTE HERO INICIO --- */
+.hero-subtitle span {
+    color: #cc952e;
+    text-shadow: 0 0 10px rgba(204, 149, 46, 0.3);
+}
+.hero-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa el texto de la imagen */
+    padding: 80px 10%;
+    min-height: 85vh;
+    background: radial-gradient(circle at right, #2c1e17 0%, #110a08 100%);
+    gap: 40px;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: left; /* Todo el texto a la izquierda */
+    padding-left: 0; 
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* La imagen se queda a la derecha */
+}
+
+.floating-img {
+    width: 110%; /* Un poquito más grande para que se luzca */
+    max-width: 600px;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.9));
+    transition: transform 0.5s ease;
+}
+
+.floating-img:hover {
+    transform: scale(1.03) rotate(2deg); /* Un pequeño efecto al pasar el mouse */
+}
+
+/* Estilo para los botones */
+.btn-primary {
+    background-color: #cc952e;
+    color: #1b0d07;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Más ovalados como la foto */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #e7e2cf;
+    border: 1px solid #cc952e;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e7e2cf;
+    transform: scale(1.05);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(204, 149, 46, 0.1);
+    transform: scale(1.05);
+}
+/* Imagen flotante */
+.floating-img {
+    width: 100%;
+    max-width: 500px;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
 }
 /*----------------footer-----------------------*/
 footer {
@@ -61,57 +163,81 @@ footer {
 }
 /*-----------------menu------------------------*/
 .products-container {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px;
+  gap: 30px;
+  padding: 20px;
 }
 /* ------------menu js------------ */
 .product-card {
- background-color: #BAA973;
- text-align: center;
- padding: 15px;
- border: 3px;
- border-radius: 15px;
+  background-color: #4e342e; /* Color beige/crema suave de la foto */
+  text-align: center;
+  padding: 0; /* Quitamos padding para que la imagen llegue al borde */
+  border-radius: 20px; /* Bordes más redondeados */
+  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  border: none;
 }
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+/* El nombre del producto */
+.product-card h3 {
+  font-family: 'Georgia', serif;
+  color: #2d1a12;
+  margin: 15px 0 5px 0;
+  font-size: 1.4rem;
+}
+/* --- ESTILO LINDO PARA LA DESCRIPCIÓN --- */
+.product-description {
+    color: #eb3c07; /* Un tono café chocolate profundo */
+    font-family: 'Georgia', serif; /* Fuente con clase y elegante */
+    font-size: 0.9rem;
+    font-style: italic; /* Le da ese toque delicado */
+    line-height: 1.6; /* Más espacio entre líneas para que respire */
+    margin: 12px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(139, 94, 60, 0.2); /* Una línea divisoria muy sutil arriba */
+    border-bottom: 1px solid rgba(139, 94, 60, 0.2); /* Y otra abajo */
+    padding: 10px 0;
+    letter-spacing: 0.3px; /* Un poco de aire entre letras */
+}
+/* El precio con ese tono café oscuro */
 .product-price {
- text-align: right;
- padding: 15px;
- color: #5a1f3c;
+  text-align: center; /* Centrado se ve más moderno */
+  padding: 5px;
+  color: #5d4037; 
+  font-weight: bold;
+  font-size: 1.2rem;
 }
+
 /*------------botones-----------*/
-.btn-add {
-  margin-top: 15px;
-  background-color: #c1d4d4;
+.btn-add, .btn-detalle {
+  margin: 10px auto 20px auto;
+  background-color: #88552c; /* Marrón elegante */
+  color: white;
   padding: 10px;
-  width: 100%;
+  width: 80%; /* No tan anchos */
   border: none;
-  border-radius: 10px;
-  cursor: pointer; /*manito del cursor*/
- } 
-.btn-detalle {
-  margin-top: 15px;
-  background-color: #c1d4d4;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer; /*manito del cursor*/
+  border-radius: 25px; /* Botones ovalados como la imagen */
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s;
 }
-.btn-add:hover {
-  background-color: #9df3f3;
-  transform: translateY(-5px);
-}
-.btn-detalle:hover {
-  background-color: #9df3f3;
-  transform: translateY(-5px);
+.btn-add:hover, .btn-detalle:hover {
+  background-color: #cc952e; /* Dorado al pasar el mouse */
+  transform: scale(1.05);
 }
 /*-----------------imagenes------------*/
 .imagen {
-  width: auto;
-  height: 100px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 /* ---------------carrito----------- */
 #view-cart {
@@ -264,45 +390,143 @@ footer {
     transform: translateY(-2px);
 }
 
+/* --- CONTENEDOR DEL FORMULARIO --- */
 .contact-form {
-  background-color: pink;
-  border: 1px solid pink;
-  border-radius: pink ;
-  padding: 32px;
-  box-shadow: black;
-  max-width: 680px;
+  background-color: #2c1e17; /* Marrón oscuro como el fondo de la imagen */
+  border: 1px solid #4a3528;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'Georgia', serif; /* Una letra más elegante */
 }
-.form-group{
-  margin-bottom: 20px;
 
-}
 .form-group {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: black;
+  margin-bottom: 25px;
+  text-align: left;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e7e2cf; /* Color crema para las etiquetas */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* --- FIX DE ESCRITURA (Inputs) --- */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid black;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  color: white;
-  background-color: white;
+  padding: 12px;
+  border: 1px solid #6d4d1c;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #ffffff; /* Texto blanco para que resalte */
+  background-color: #3d2b21; /* Fondo marrón un poco más claro que el contenedor */
+  outline: none;
+  transition: border-color 0.3s;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #cc952e; /* Dorado cuando haces clic para escribir */
+}
+
+/* --- BOTÓN DE ENVÍO --- */
+.contact-form button[type="submit"] {
+  width: 100%;
+  background-color: #cc952e; /* Dorado como el botón de la imagen */
+  color: #2c1e17;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #e7e2cf;
+  color: #2c1e17;
+}
+
+/* Mensajes de error y éxito */
 .error-msg {
-  display: block;
-  color: brown;
-  margin-top: 4px;
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 .success-msg {
-  margin-top: 16px;
-  color: green;
-  font-weight: 600;
+  color: #a2d2a2;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================== */
+
+/* Para tablets y celulares (Pantallas menores a 768px) */
+@media (max-width: 768px) {
+  
+  /* 1. Ajuste del Nav */
+  .navbar {
+    flex-direction: column; /* Ponemos el logo arriba y el menú abajo */
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .link {
+    flex-wrap: wrap; /* Si no caben los botones, que bajen a la siguiente línea */
+    justify-content: center;
+  }
+
+  .link a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* 2. Ajuste del Formulario */
+  .contact-form {
+    width: 90%; /* Que ocupe casi toda la pantalla en el celular */
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  /* 3. Ajuste del Carrito (Factura) */
+  #cart-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .cart-item {
+    flex-direction: column; /* Nombre arriba, controles abajo */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}
+
+/* Para celulares muy pequeños (Menores a 480px) */
+@media (max-width: 480px) {
+  .logo {
+    height: 70px; /* Logo más chiquito para que no robe espacio */
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .btn-add, .btn-detalle {
+    font-size: 0.9rem;
+  }
 }
