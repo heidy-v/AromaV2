@@ -1,51 +1,58 @@
 [
   {
     "id": 1,
-    "nombre": "Cafe Americano",
-    "precio": 12,
-    "disponible": true,
-    "emoji": "coffee"
+    "nombre": "Torta de Selva Negra",
+    "imagen": "img/selva-negra.jpg",
+    "descripcion": "Bizcocho de chocolate con crema chantilly y cerezas.",
+    "precio": 12
   },
   {
     "id": 2,
-    "nombre": "Capuccino",
-    "precio": 18,
-    "disponible": true,
-    "emoji": "cup"
+    "nombre": "Red Velvet",
+    "imagen": "img/red-velvet.jpg",
+    "descripcion": "Bizcocho de color rojo intenso y crema de queso.",
+    "precio": 12
   },
   {
     "id": 3,
-    "nombre": "Latte",
-    "precio": 16,
-    "disponible": true,
-    "emoji": "milk"
+    "nombre": "Torta De Tres Leches",
+    "imagen": "img/tres-leches.jpg",
+    "descripcion": "Bizcocho suave relleno de manjar blanco tradicional.",
+    "precio": 10
   },
   {
     "id": 4,
-    "nombre": "Brownie",
-    "precio": 11,
-    "disponible": true,
-    "emoji": "cake"
+    "nombre": "Torta De Pistacho",
+    "imagen": "img/pistacho.jpg",
+    "descripcion": "Una combinación elegante de bizcocho verde con frutos rojos.",
+    "precio": 15
   },
   {
     "id": 5,
-    "nombre": "Mocha",
-    "precio": 20,
-    "disponible": true,
-    "emoji": "coffee"
+    "nombre": "Torta De chocolate",
+    "imagen": "img/chocolate.jpg",
+    "descripcion": "Clásica torta de chocolate con cobertura de fudge.",
+    "precio": 15
   },
   {
     "id": 6,
-    "nombre": "Te Verde",
-    "precio": 8,
-    "disponible": true,
-    "emoji": "leaf"
+    "nombre": "Torta De frutilla",
+    "imagen": "img/frutilla.jpg",
+    "descripcion": "Bizcocho de vainilla con trozos de frutilla fresca.",
+    "precio": 15
+  },
+  {
+    "id": 7,
+    "nombre": "Torta De coco",
+    "imagen": "img/coco.jpg",
+    "descripcion": "Deliciosa torta con ralladura de coco tostado.",
+    "precio": 15
   },
   {
     "id": 8,
-    "nombre": "Frappe Caramel",
-    "precio": 24,
-    "disponible": false,
-    "emoji": "ice_cream"
+    "nombre": "Torta De Nueces",
+    "imagen": "img/nueces.jpg",
+    "descripcion": "Bizcocho crocante con nueces seleccionadas.",
+    "precio": 15
   }
 ]
